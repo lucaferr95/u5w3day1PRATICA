@@ -35,7 +35,8 @@ public class JwtFilter extends OncePerRequestFilter {
         }
         else{
             //estraggo il token dalla stringa authorization che contiene anche la parola Bearer  prima del token. Per questo prendo solo
-            //la parte della stringa che comincia dal carattere 7
+            //la parte della stringa che comincia dal carattere 7(scarta la parola Bearer)
+
             String token = authorization.substring(7);
 
             //verifico che il token sia valido
@@ -47,6 +48,7 @@ public class JwtFilter extends OncePerRequestFilter {
     }
 
     //questo metodo evita che gli endpoint di registrazione e login possano richiedere il token
+    //altrimenti non possiamo registrarci
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         return new AntPathMatcher().match("/auth/**", request.getServletPath());
