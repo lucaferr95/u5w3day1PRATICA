@@ -23,13 +23,18 @@ public class SecurityConfig {
         //serve per bloccare richieste che provengono da domini(indirizzo ip e porta) esterni a quelli del servizio
         httpSecurity.cors(Customizer.withDefaults());
 
-        httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/auth/**").permitAll());
-//        httpSecurity.authorizeHttpRequests(http->http.requestMatchers(HttpMethod.GET,"/studenti/**").permitAll());
+        httpSecurity.authorizeHttpRequests(http -> http
+                .requestMatchers("/auth/**").permitAll()
+                .requestMatchers("/prenotazioni/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/viaggi/**").denyAll()
+                .requestMatchers(HttpMethod.GET, "/dipendenti/**").denyAll()
+                .requestMatchers("/viaggi/**").permitAll()
+                .requestMatchers("/dipendenti/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/**").permitAll()
+                .anyRequest().denyAll()
+        );
 
-        httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/studenti/**").permitAll());
-        httpSecurity.authorizeHttpRequests(http->http.requestMatchers(HttpMethod.POST).permitAll());
 
-        httpSecurity.authorizeHttpRequests(http->http.anyRequest().denyAll());
 
         return httpSecurity.build();
     }
