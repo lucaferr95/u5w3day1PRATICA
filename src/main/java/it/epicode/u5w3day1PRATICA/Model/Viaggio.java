@@ -1,7 +1,8 @@
 package it.epicode.u5w3day1PRATICA.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Enum.StatoViaggio;
+
+import it.epicode.u5w3day1PRATICA.Enum.StatoViaggio;
 import jakarta.persistence.*;
 import lombok.Data;
 

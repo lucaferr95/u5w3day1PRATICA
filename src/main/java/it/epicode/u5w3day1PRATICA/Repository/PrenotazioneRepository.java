@@ -1,6 +1,7 @@
 package it.epicode.u5w3day1PRATICA.Repository;
 
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Prenotazione;
+
+import it.epicode.u5w3day1PRATICA.Model.Prenotazione;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

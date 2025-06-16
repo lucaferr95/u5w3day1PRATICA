@@ -1,13 +1,14 @@
 package it.epicode.u5w3day1PRATICA.Service;
 
 import com.cloudinary.Cloudinary;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Dto.PrenotazioneDto;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.NotFoundException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.PrenotazioneGiaEsistenteException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Dipendente;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Prenotazione;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Viaggio;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Repository.PrenotazioneRepository;
+
+import it.epicode.u5w3day1PRATICA.Dto.PrenotazioneDto;
+import it.epicode.u5w3day1PRATICA.Exception.NotFoundException;
+import it.epicode.u5w3day1PRATICA.Exception.PrenotazioneGiaEsistenteException;
+import it.epicode.u5w3day1PRATICA.Model.Dipendente;
+import it.epicode.u5w3day1PRATICA.Model.Prenotazione;
+import it.epicode.u5w3day1PRATICA.Model.Viaggio;
+import it.epicode.u5w3day1PRATICA.Repository.PrenotazioneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;

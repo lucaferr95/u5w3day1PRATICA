@@ -1,11 +1,12 @@
 package it.epicode.u5w3day1PRATICA.Service;
 
 import com.cloudinary.Cloudinary;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Dto.ViaggioDto;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Enum.StatoViaggio;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.NotFoundException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Viaggio;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Repository.ViaggioRepository;
+
+import it.epicode.u5w3day1PRATICA.Dto.ViaggioDto;
+import it.epicode.u5w3day1PRATICA.Enum.StatoViaggio;
+import it.epicode.u5w3day1PRATICA.Exception.NotFoundException;
+import it.epicode.u5w3day1PRATICA.Model.Viaggio;
+import it.epicode.u5w3day1PRATICA.Repository.ViaggioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -25,7 +26,7 @@ public class ViaggioService {
     JavaMailSenderImpl javaMailSender;
 
     //Metodo save viaggio
-    public Viaggio saveViaggio(ViaggioDto viaggioDto) throws NotFoundException{
+    public Viaggio saveViaggio(ViaggioDto viaggioDto) throws NotFoundException {
         Viaggio viaggio= new Viaggio();
         viaggio.setDestinazione(viaggioDto.getDestinazione());
         viaggio.setDataViaggio(viaggioDto.getDataViaggio());

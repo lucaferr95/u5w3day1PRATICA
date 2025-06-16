@@ -1,10 +1,11 @@
 package it.epicode.u5w3day1PRATICA.Service;
 
 import com.cloudinary.Cloudinary;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Dto.DipendenteDto;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.NotFoundException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Dipendente;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Repository.DipendenteRepository;
+
+import it.epicode.u5w3day1PRATICA.Dto.DipendenteDto;
+import it.epicode.u5w3day1PRATICA.Exception.NotFoundException;
+import it.epicode.u5w3day1PRATICA.Model.Dipendente;
+import it.epicode.u5w3day1PRATICA.Repository.DipendenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -1,10 +1,11 @@
 package it.epicode.u5w3day1PRATICA.Controller;
 
-import it.epicode.u5w2dayGESTIONEVIAGGI.Dto.DipendenteDto;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.NotFoundException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.ValidationException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Dipendente;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Service.DipendenteService;
+
+import it.epicode.u5w3day1PRATICA.Dto.DipendenteDto;
+import it.epicode.u5w3day1PRATICA.Exception.NotFoundException;
+import it.epicode.u5w3day1PRATICA.Model.Dipendente;
+import it.epicode.u5w3day1PRATICA.Service.DipendenteService;
+import jakarta.validation.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -27,7 +28,7 @@ public class DipendenteController {
     //per gestire la validazione, devo aggiungere @Validated al dto e poi il metodo deve gestire anche il
     //parametro di tipo BindingResult che conterrà tutti gli eventuali errori del dto
     public Dipendente saveDipendente(@RequestBody @Validated DipendenteDto dipendenteDto,
-                                       BindingResult bindingResult) throws NotFoundException, ValidationException {
+                                     BindingResult bindingResult) throws NotFoundException, ValidationException {
         if(bindingResult.hasErrors()){
             //gli errori li prendiamo dal bindingResult ma vengono restituiti come liste di objectError.
             //il costruttore dell'eccezione accetta una stringa e quindi con lo stream trasformiamo la lista in una stringa

@@ -1,6 +1,7 @@
 package it.epicode.u5w3day1PRATICA.Exception;
 
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.ApiError;
+
+import it.epicode.u5w3day1PRATICA.Model.ApiError;
 import jakarta.validation.ValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

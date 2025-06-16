@@ -1,11 +1,11 @@
 package it.epicode.u5w3day1PRATICA.Controller;
 
-import it.epicode.u5w2dayGESTIONEVIAGGI.Dto.ViaggioDto;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Enum.StatoViaggio;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.NotFoundException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Exception.ValidationException;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Model.Viaggio;
-import it.epicode.u5w2dayGESTIONEVIAGGI.Service.ViaggioService;
+import it.epicode.u5w3day1PRATICA.Dto.ViaggioDto;
+import it.epicode.u5w3day1PRATICA.Enum.StatoViaggio;
+import it.epicode.u5w3day1PRATICA.Exception.NotFoundException;
+import it.epicode.u5w3day1PRATICA.Model.Viaggio;
+import it.epicode.u5w3day1PRATICA.Service.ViaggioService;
+import jakarta.validation.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
@@ -26,7 +26,7 @@ public class ViaggioController {
     //per gestire la validazione, devo aggiungere @Validated al dto e poi il metodo deve gestire anche il
     //parametro di tipo BindingResult che conterrà tutti gli eventuali errori del dto
     public Viaggio viaggio(@RequestBody @Validated ViaggioDto viaggioDto,
-                                  BindingResult bindingResult) throws NotFoundException, ValidationException {
+                           BindingResult bindingResult) throws NotFoundException, ValidationException {
         if(bindingResult.hasErrors()){
             //gli errori li prendiamo dal bindingResult ma vengono restituiti come liste di objectError.
             //il costruttore dell'eccezione accetta una stringa e quindi con lo stream trasformiamo la lista in una stringa
